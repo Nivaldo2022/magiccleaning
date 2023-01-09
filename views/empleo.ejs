@@ -1,0 +1,46 @@
+<head>
+    
+    <%- include('seo'); %>
+</head>    
+    <%- include('header'); %>
+<div class="contact">
+                    <div class="div-form">
+                        <form class="form" action="/message" method="post">
+                            <div class="border-form">
+                                   
+                                <h5 class="question p-2 bg-primary" style="color:#fff">Unete y Trabaja Junto a Magic Cleaning</h5>
+                               
+                                <div class="div-name">
+                                    <label for="name" class="form-label">Nombre</label>
+                                    <input class="form-control w-100 mb-3 " type="text" name="name" id="name" placeholder="Nombre" name="name">
+                                    <p style="color: red;"><%=(typeof errors!='undefined' && typeof errors.name!='undefined' )? errors.name.msg:''%></p>
+                                </div>
+                                <div class="div-email">
+                                    <label for="email" class="form-label ">Gmail</label>
+                                    <input class="form-control w-100 mb-3" type="email" placeholder="Gmail" id="email" name="email">
+                                    <p style="color: red;"><%=(typeof errors!='undefined' && typeof errors.email!='undefined' )? errors.email.msg:''%></p>
+                                </div>
+                                <div class="div-message mb-3">
+                                    <label for="tel" class="form-label">Télefono</label>
+                                    <input type="tel" id="tel" class="form-control w-100" name="tel" placeholder="Télefono" >
+                                </div>
+                                <div class="div-zip">
+                                    <label for="zip" class="form-label  ">Codigo Postal</label>
+                                    <input class="form-control w-100 mb-3"  type="number" name="zip" id="zip" placeholder="Codigo Postal" >
+                                    <p style="color: red;"><%=(typeof errors!='undefined' && typeof errors.zip!='undefined' )? errors.zip.msg:''%></p>
+                                </div>
+                                
+
+                                <div class="div-btn">
+                                    <button  type="submit " class="btn btn-primary btn-send">Postularse</button>
+
+                                </div>
+                            </div>
+                        </form>
+
+                    </div>
+
+                </div>
+                <%- include('footer'); %>
+
+       
